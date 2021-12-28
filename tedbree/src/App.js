@@ -5,6 +5,9 @@ import { BrowserRouter,  Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
+      <h3 className="text-sky-900 text-lg font-bold" >New Job</h3>
+
+
       
       <BrowserRouter>
         <Routes>
