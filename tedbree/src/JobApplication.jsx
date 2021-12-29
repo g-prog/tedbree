@@ -1,11 +1,6 @@
 import React from "react";
 import './jobcreation.css'
 
-
-
-
-
-
 function JobApplication() {
   return (
    <div className="job">
