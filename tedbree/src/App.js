@@ -3,6 +3,7 @@ import JobCreation from './JobCreation'
 import JobApplication from './JobApplication'
 import Home from './Home'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
@@ -11,7 +12,7 @@ function App() {
           <Route path="/create" element={<JobCreation />}/>
         </Routes>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route exact path="/" element={<Home />}/>
         </Routes>
         <Routes>
           <Route path="/apply" element={<JobApplication />}/>
