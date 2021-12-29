@@ -3,3 +3,6 @@ nav{
     justify-content: space-evenly;
     align-items: center;
 }
+input:focus{
+    outline: none;
+}
