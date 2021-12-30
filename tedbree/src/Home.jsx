@@ -39,7 +39,7 @@ function Home() {
        </div>
        <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded">
             <div className="ml-7">
-                <SearchIcon/>
+                <SearchIcon style={{color: "turquoise" }}/>
             </div>
            <input  className="ml-7" type="text" />
            <div className="flex ml-10">
@@ -47,7 +47,7 @@ function Home() {
                     |
                </div>
                 <div className="ml-28">
-                    <FmdGoodIcon/>
+                    <FmdGoodIcon style={{color: "turquoise" }}/>
                </div>
                <input type="text" className="ml-10"/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-7"><p className="text-white">Search</p></button>
@@ -59,17 +59,23 @@ function Home() {
        <div className="flex flex-col justify-items-center items-center">
             <Card
             title="Front end developer"
-            description="Front end developer"
+            description="Front end developer is responsible for design, user aesthetics and handling of the client side of the application."
             price="3k-5k"
+            location="Yaba, Lagos"
 
 
             />
 
             <Card
             title="Front end developer"
-            description="Front end developer"
+            description="Front end developer is responsible for design, user aesthetics and handling of the client side of the application."
+            price="3k-5k"
+            location="Yaba, Lagos"
+
 
             />
+
+           
        </div>
        
         
