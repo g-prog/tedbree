@@ -26,7 +26,9 @@ function JobCreation() {
           Company: data.Company,
           Location: data.Location,
           Salary: data.Salary,
-          Deadline: data.Deadline
+          Deadline: data.Deadline,
+          EmploymentType: data.EmploymentType,
+          Category: data.Category
           
 
     
@@ -75,7 +77,7 @@ function JobCreation() {
 
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label  className=" text-sky-900 text-sm font-bold" >What type of employment is it ?</label>
-                    <select onChange={(e)=>handle(e)}  value={data.EmploymentType}id="employment" className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" placeholder="select option">
+                    <select  id="employment" className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" placeholder="select option">
                         <option value="">Full-time</option>
                         <option value="">Temporary</option>
                         <option value="">Contract</option>
@@ -101,7 +103,7 @@ function JobCreation() {
 
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label  className=" text-sky-900 text-sm font-bold" >What sector is this job categorized ?</label>
-                    <select onChange={(e)=>handle(e)}  value={data.Category}id="employment" className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1">
+                    <select id="employment" className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1">
                         <option value="">Tech</option>
                         <option value="">Healthcare</option>
                         <option value="">Hospitality</option>
