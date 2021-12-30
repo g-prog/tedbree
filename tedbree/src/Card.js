@@ -21,7 +21,7 @@ function Card({title, description, price, location}) {
 
             </div>
             <div className='mt-5'>
-                <p className='text-base'>{description}</p>
+                <p className='text-sm'>{description}</p>
 
             </div>
 

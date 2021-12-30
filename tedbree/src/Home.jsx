@@ -73,24 +73,16 @@ function Home() {
    </div>
    
             {data.map ((each)=>(
-                 <div className="bg-sky-200 py-28 ">
-                 <div className="flex flex-col justify-items-center items-center"  key={data.id}>
-                      <Card
-                      title={each.title}
-                      description={each.body}
-                      price="3k-5k"
-                      location="Yaba, Lagos"
-             
-             
-                      />
-             
-                      
-             
-                     
-                 </div>
-                  
-             
-                 </div>
+                <div className="bg-sky-200 py-28 ">
+                    <div className="flex flex-col justify-items-center items-center"  key={data.id}>
+                        <Card
+                         title={each.title}
+                         description={each.body}
+                         price="3k-5k"
+                         location="Yaba, Lagos"
+                        />
+                    </div>
+                </div>
                                     
                                     
                                   
