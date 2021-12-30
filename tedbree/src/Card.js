@@ -12,7 +12,6 @@ function Card({title, description, price, location}) {
             <div className='flex mt-2'>
                 <div>
                     <FmdGoodIcon style={{color: "turquoise", fontSize : 18 }}/>
-
                 </div>
                 <div >
                     <p className='text-sm mt-1 ml-1'>{location}</p>
@@ -28,7 +27,6 @@ function Card({title, description, price, location}) {
 
             <div className='mt-5 ml-96'>
                 <button className='text-sm bg-rose-500 text-white py-1.5 px-2 rounded-md w-24'>See more</button>
-
             </div>
 
             

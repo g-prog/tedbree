@@ -1,11 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react"
 import './home.css'
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
-import Card from './Card'
+import Card from './Card';
+import Axios from 'axios'
+
 
 function Home() {
+    const [data, setData] = useState([])
+    useEffect(()=>{
+        Axios.get(`https://jsonplaceholder.typicode.com/posts`).then((res)=>{
+            const responseData = res.data;
+            setData(responseData);
+        })
+        .catch(err=> {
+            console.log(err)
+
+        })
+    }, []);
+
+    
   return (
    <div >
        <div className="w-full bg-sky-900 py-11 relative">
@@ -55,32 +71,30 @@ function Home() {
        </div>
     
    </div>
-   <div className="bg-sky-200 py-28 ">
-       <div className="flex flex-col justify-items-center items-center">
-            <Card
-            title="Front end developer"
-            description="Front end developer is responsible for design, user aesthetics and handling of the client side of the application."
-            price="3k-5k"
-            location="Yaba, Lagos"
-
-
-            />
-
-            <Card
-            title="Front end developer"
-            description="Front end developer is responsible for design, user aesthetics and handling of the client side of the application."
-            price="3k-5k"
-            location="Yaba, Lagos"
-
-
-            />
-
-           
-       </div>
-       
-        
-
-    </div>
+   
+            {data.map ((each)=>(
+                 <div className="bg-sky-200 py-28 ">
+                 <div className="flex flex-col justify-items-center items-center"  key={data.id}>
+                      <Card
+                      title={each.title}
+                      description={each.body}
+                      price="3k-5k"
+                      location="Yaba, Lagos"
+             
+             
+                      />
+             
+                      
+             
+                     
+                 </div>
+                  
+             
+                 </div>
+                                    
+                                    
+                                  
+            )) }
    </div>
    
   );
