@@ -7,7 +7,7 @@ function Card({title, description, price, location}) {
         <div className='bg-white w-5/12 py-7 px-14 rounded-md mt-10 flex flex-col'>
             <div className='flex justify-between'>
                 <h1 className='text-sky-900 font-bold text-lg'>{title}</h1>
-                <p className='text-sky-900 font-bold text-lg '>{price}</p>
+                <p className='text-sky-900 font-bold text-lg '>${price}</p>
             </div>
             <div className='flex mt-2'>
                 <div>
