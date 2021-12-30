@@ -39,18 +39,18 @@ function Home() {
        </div>
        <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded">
             <div className="ml-7">
-                <SearchIcon style={{color: "turquoise" }}/>
+                <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
            <input  className="ml-7" type="text" />
            <div className="flex ml-10">
-                <div className="ml-20">
-                    |
+                <div className="line">
+                    
                </div>
-                <div className="ml-28">
-                    <FmdGoodIcon style={{color: "turquoise" }}/>
+                <div className="ml-20">
+                    <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
                <input type="text" className="ml-10"/>
-                <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-7"><p className="text-white">Search</p></button>
+                <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white">Search</p></button>
             </div> 
        </div>
     
