@@ -46,7 +46,7 @@ function Home() {
                 <div className="line">
                     
                </div>
-                <div className="ml-20">
+                <div className="ml-10">
                     <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
                <input type="text" className="ml-10"/>
