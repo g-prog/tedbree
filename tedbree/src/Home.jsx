@@ -114,13 +114,13 @@ function Home() {
    </div>
    {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
         {searchInput && searchInput.length > 1 
-        ? filtered && filtered.map(({ id, title, salary, location, bio}) => (
+        ? filtered && filtered.map(({ id, title, salary, Location, bio}) => (
               <div  key={id}>
                 <Card
                     title={title}
                     description={bio}
                     price={salary}
-                    location={location}
+                    location={Location}
                   
                 />
          
@@ -131,7 +131,7 @@ function Home() {
           
         ))
         
-      :destination && destination.map(({ id, title, salary, location, bio}) => (
+      :destination && destination.map(({ id, title, salary, Location, bio}) => (
         <div className="flex flex-col justify-items-center items-center">
             <Link to={`/jobs/${id}`}>
               <div  key={id}>
@@ -139,7 +139,7 @@ function Home() {
                  title={title}
                  description={bio}
                  price={salary}
-                 location={location}
+                 location={Location}
                   
                 />
          
