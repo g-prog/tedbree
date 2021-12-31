@@ -22,7 +22,7 @@ function Card({title, description, price, location}) {
 
             </div>
             <div className='mt-5'>
-                <p className='text-xs'>{description}</p>
+                <p className='text-xs text-justify'>{description}</p>
 
             </div>
 
