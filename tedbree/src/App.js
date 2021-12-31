@@ -2,7 +2,6 @@ import React from 'react';
 import JobCreation from './JobCreation'
 import JobApplication from './JobApplication'
 import Home from './Home'
-import Pagination from './Pagination'
 import JobDetails from './JobDetails'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 
@@ -19,9 +18,7 @@ function App() {
         <Routes>
           <Route path="/apply" element={<JobApplication />}/>
         </Routes>
-        <Routes>
-          <Route path="/pagination" element={<Pagination />}/>
-        </Routes>
+        
         <Routes>
           <Route path="/jobs/:id" element={<JobDetails />}/>
         </Routes>
