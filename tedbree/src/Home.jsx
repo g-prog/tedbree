@@ -112,7 +112,7 @@ function Home() {
        </div>
     
    </div>
-   {isLoading ? <h1 className="h-screen text-4xl mt-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
+   {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
         {searchInput && searchInput.length > 1 
         ? filtered && filtered.map(({ id, title, description, bio}) => (
             <div className="flex flex-col justify-items-center items-center">
