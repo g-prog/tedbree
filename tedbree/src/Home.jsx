@@ -8,23 +8,63 @@ import Card from './Card';
 import Axios from 'axios'
 
 
+const endpoint = `https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree`
 function Home() {
-    const [data, setData] = useState([])
-    useEffect(()=>{
-        Axios.get(`https://jsonplaceholder.typicode.com/posts`).then((res)=>{
-            const responseData = res.data;
-            setData(responseData);
-        })
-        .catch(err=> {
-            console.log(err)
 
-        })
+    const [destination, setDestination] = useState([])
+    const [filtered, setFiltered] = useState([])
+    const [searchInput, setSearchInput] = useState("")
+    const[isLoading, setIsLoading] = useState(true)
+  
+    const fetchDestination = async () => {
+      const res = await fetch(endpoint)
+      const data = await res.json()
+      setDestination(data)
+      setIsLoading(false)
+    }
+  
+    useEffect(() => {
+      fetchDestination()
+    })
+  
+    const searchDestination = (searchValue) => {
+      setSearchInput(searchValue)
+  
+      if (searchInput) {
+        const filteredSearch = destination.filter((user) =>
+          Object.values(user)
+            .join("")
+            .toLowerCase()
+            .includes(searchValue.toLowerCase())
+        )
+        setFiltered(filteredSearch)
+      } else {
+        setFiltered(destination)
+      }
+    }
+  
+    
+  
+  
+  
+  useEffect(() => {
+    const { data } = Axios.get('https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree',
+    {
+      
+    });
+  
+    console.log(data)   
     }, []);
+    
+    
 
     
   return (
+  
    <div >
+       
        <div className="w-full bg-sky-900 py-11 relative">
+       
        <div className="flex flex-col ">
             <nav>
                 <div className="logo">
@@ -57,7 +97,8 @@ function Home() {
             <div className="ml-7">
                 <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
-           <input  className="ml-7" type="text" />
+           <input  className="ml-7" type="text" name="text"
+            id="text"  onChange={(e) => searchDestination(e.target.value)}/>
            <div className="flex ml-10">
                 <div className="line">
                     
@@ -71,22 +112,61 @@ function Home() {
        </div>
     
    </div>
+   {isLoading ? <h1 className="h-screen text-4xl mt-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
+        
    
-            {data.map ((each)=>(
-                <div className="bg-sky-200 py-28 ">
-                    <div className="flex flex-col justify-items-center items-center"  key={data.id}>
-                        <Card
-                         title={each.title}
-                         description={each.body}
-                         price="3k-5k"
-                         location="Yaba, Lagos"
-                        />
-                    </div>
-                </div>
-                                    
-                                    
-                                  
-            )) }
+        {searchInput && searchInput.length > 1 
+        ? filtered && filtered.map(({ id, title, description, bio}) => (
+            <div className="flex flex-col justify-items-center items-center">
+                <Link >
+              <div  key={id}>
+                <Card
+                    title={title}
+                    description={bio}
+                    price="3k-5k"
+                    location="Yaba, Lagos"
+                  
+                />
+         
+              </div>
+            </Link>
+                
+            </div>
+        
+          
+          
+        ))
+        
+      :destination && destination.map(({ id, title, description, bio}) => (
+        <div className="flex flex-col justify-items-center items-center">
+            <Link to={`/jobs/${id}`}>
+              <div  key={id}>
+                <Card
+                 title={title}
+                 description={bio}
+                 price="3k-5k"
+                 location="Yaba, Lagos"
+                  
+                />
+         
+              </div>
+         </Link>
+
+        </div>
+            
+            
+         
+         
+         ))}
+       
+
+    
+
+
+
+</div>
+} 
+   
    </div>
    
   );
