@@ -114,36 +114,32 @@ function Home() {
    </div>
    {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
         {searchInput && searchInput.length > 1 
-        ? filtered && filtered.map(({ id, title, description, bio}) => (
-            <div className="flex flex-col justify-items-center items-center">
-                <Link >
+        ? filtered && filtered.map(({ id, title, salary, location, bio}) => (
               <div  key={id}>
                 <Card
                     title={title}
                     description={bio}
-                    price="3k-5k"
-                    location="Yaba, Lagos"
+                    price={salary}
+                    location={location}
                   
                 />
          
               </div>
-            </Link>
                 
-            </div>
         
           
           
         ))
         
-      :destination && destination.map(({ id, title, description, bio}) => (
+      :destination && destination.map(({ id, title, salary, location, bio}) => (
         <div className="flex flex-col justify-items-center items-center">
             <Link to={`/jobs/${id}`}>
               <div  key={id}>
                 <Card
                  title={title}
                  description={bio}
-                 price="3k-5k"
-                 location="Yaba, Lagos"
+                 price={salary}
+                 location={location}
                   
                 />
          
