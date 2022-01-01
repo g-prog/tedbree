@@ -22,7 +22,7 @@ function Admin() {
                     <img  className='w-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
                 </div>
             </nav>
-            <div className="w-6/12 ml-64">
+            <div className="w-6/12 ml-80">
                 <h1 className="text-white text-5xl font-bold mt-32" >Job</h1>
 
             </div>
