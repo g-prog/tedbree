@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import './home.css'
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import SearchIcon from '@mui/icons-material/Search';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import Footer from './Footer';
@@ -89,7 +90,7 @@ function Home() {
              </div>
             </div>
        </div>
-       <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded">
+       <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
@@ -107,7 +108,18 @@ function Home() {
        </div>
     
    </div>
-   {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
+   {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100 py-28 ">
+        <div className='flex justify-center items-center'>
+          
+          <p className='mt-2'>Showing {destination.length} results</p>
+          <div className='flex mt-2 ml-4'>
+            <p className='text-gray-500'>Sort by:</p>
+            <div className='flex ml-2'>
+              <p>Latest</p>
+              <KeyboardArrowDownIcon style={{ marginTop: 2 }}/>
+            </div>
+          </div>
+        </div>
         {searchInput && searchInput.length > 1 
         ? filtered && filtered.map(({ id, title, salary, Location, bio}) => (
             <div className="flex flex-col justify-items-center items-center">
@@ -134,6 +146,7 @@ function Home() {
         ))
         
       :destination && destination.map(({ id, title, salary, Location, bio}) => (
+       
         <div className="flex flex-col justify-items-center items-center">
             <Link to={`/jobs/${id}`}>
               <div  key={id}>

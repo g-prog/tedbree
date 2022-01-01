@@ -27,7 +27,7 @@ function Card({title, description, price, location}) {
             </div>
 
             <div className='mt-5 ml-60'>
-                <button className='text-sm bg-rose-500 hover:bg-white text-white py-1.5 px-2 rounded-md w-24'>See more</button>
+                <button className='text-sm bg-rose-500  text-white py-1.5 px-2 rounded-md w-24'>See more</button>
                
             </div>
 
