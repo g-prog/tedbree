@@ -23,7 +23,7 @@ function Admin() {
                 </div>
             </nav>
             <div className="w-6/12 ml-64">
-                <h1 className="text-white text-5xl font-bold mt-32 " >Job</h1>
+                <h1 className="text-white text-5xl font-bold mt-32" >Job</h1>
 
             </div>
            
@@ -50,8 +50,6 @@ function Admin() {
                 <div className='flex'>
                     <p className='text-white'>Filter</p>
                     <FilterAltIcon  style={{color: "white", marginLeft: 5 }}/>
-
-
                 </div>
 
             </div>

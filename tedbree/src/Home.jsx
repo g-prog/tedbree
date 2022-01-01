@@ -67,14 +67,14 @@ function Home() {
        <div className="flex flex-col ">
           <nav>
                 <div className="logo">
-                    <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+                  <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
                 </div>
                 <div className="flex">
                     <ul className="flex">
-                        <Link to='/'><li className="text-white  ml-10 font-bold ">Jobs</li></Link>
-                        <Link to='/admin'><li className="text-sky-100  ml-10">Admin</li></Link>
-                        <Link to='/login'><li className="text-sky-100  ml-10">Login</li></Link>
-                        <Link to='/'><li className="text-sky-100  ml-10">Find Salaries</li></Link>  
+                      <Link to='/'><li className="text-white  ml-10 font-bold ">Jobs</li></Link>
+                      <Link to='/admin'><li className="text-sky-100  ml-10">Admin</li></Link>
+                      <Link to='/login'><li className="text-sky-100  ml-10">Login</li></Link>
+                      <Link to='/'><li className="text-sky-100  ml-10">Find Salaries</li></Link>  
                     </ul>
                     <Link to='/create'><button className="text-white  ml-14 bg-white py-1.5 px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                 </div>
@@ -82,14 +82,11 @@ function Home() {
             <div className="flex mt-28 ml-72">
               <div className="w-6/12">
                 <h1 className="text-white text-5xl font-medium mt-32" >Find Your Dream Job</h1>
-
               </div>
                 
               <div className="ml-32">
                 <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
-               
-
             </div>
        </div>
        <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded">
@@ -113,16 +110,23 @@ function Home() {
    {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-200 py-28 ">
         {searchInput && searchInput.length > 1 
         ? filtered && filtered.map(({ id, title, salary, Location, bio}) => (
+            <div className="flex flex-col justify-items-center items-center">
+            <Link to={`/jobs/${id}`}>
               <div  key={id}>
                 <Card
-                    title={title}
-                    description={bio}
-                    price={salary}
-                    location={Location}
+                title={title}
+                description={bio}
+                price={salary}
+                location={Location}
                   
                 />
-         
+        
               </div>
+          </Link>
+
+      </div>
+          
+             
                 
         
           
