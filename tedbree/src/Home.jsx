@@ -71,10 +71,10 @@ function Home() {
                 </div>
                 <div className="flex">
                     <ul className="flex">
-                        <li className="text-white  ml-10 font-bold ">Jobs</li>
-                        <li className="text-sky-100  ml-10">Company Review</li>
-                        <li className="text-sky-100  ml-10">Find Salaries</li>
-                        
+                        <Link to='/'><li className="text-white  ml-10 font-bold ">Jobs</li></Link>
+                        <Link to='/admin'><li className="text-sky-100  ml-10">Admin</li></Link>
+                        <Link to='/login'><li className="text-sky-100  ml-10">Login</li></Link>
+                        <Link to='/'><li className="text-sky-100  ml-10">Find Salaries</li></Link>  
                     </ul>
                     <Link to='/create'><button className="text-white  ml-14 bg-white py-1.5 px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                 </div>
@@ -104,7 +104,7 @@ function Home() {
                 <div className="ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
-               <input type="text" className="ml-10"/>
+               <input type="text" className="ml-10"  name="text"id="text"  onChange={(e) => searchDestination(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white">Search</p></button>
             </div> 
        </div>

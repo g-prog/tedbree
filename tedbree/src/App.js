@@ -3,6 +3,7 @@ import JobCreation from './JobCreation'
 import JobApplication from './JobApplication'
 import Home from './Home'
 import JobDetails from './JobDetails'
+import Admin from './Admin'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/apply" element={<JobApplication />}/>
+        </Routes>
+        <Routes>
+          <Route path="/admin" element={<Admin />}/>
         </Routes>
         
         <Routes>
