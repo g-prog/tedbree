@@ -43,7 +43,7 @@ function Admin() {
                 </button>
             </div>
 
-            <div className='flex bg-sky-900 w-11/12 mt-10 ml-4 rounded-md py-2 px-2 justify-around'>
+            <div className='flex bg-sky-900 w-11/12 mt-10 ml-10 rounded-md py-2 px-2 justify-around'>
                 <div className='text-white'>Job Title</div>
                 <div className='text-white'>Candidates</div>
                 <div className='text-white'>Date Modified</div>
