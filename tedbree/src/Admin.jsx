@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -29,15 +29,17 @@ function Admin() {
         </div>
 
             <div className='flex justify-around mt-10'>
-                <div className='bg-white w-8/12 shadow-lg'>
-                    <h1>Hello</h1>
-
+                <div className=' flex justify-around bg-white w-4/12 shadow-lg py-2 rounded-md'>
+                    <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
+                    <input className='ml-4'/>
+                    <button className="bg-rose-500 py-1 px-4 rounded-md ml-1"><p className="text-white">Search</p></button>
                 </div>
 
-                <div>
-                    <h1>Hello</h1>
+                <button className='bg-rose-500 flex py-1.5 px-2 rounded-lg'>
+                    <AddIcon style={{color: "white", marginTop: 10 }}/>
+                    <p className='text-white mt-2'>New Job</p>
 
-                </div>
+                </button>
             </div>
 
         </div>
