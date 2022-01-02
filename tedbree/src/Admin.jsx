@@ -116,7 +116,6 @@ function Admin() {
 
 
             <div>
-                
                 {
                  users.map((item, i) =>
                  <div  className='flex  bg-white shadow-lg w-11/12 ml-10 mt-4 py-4 justify-around' key={i}>
@@ -134,7 +133,7 @@ function Admin() {
           }
 
 
-            </div>
+         </div>
             <div className='flex flex-col justify-center w-5/12 items-center mt-10 ml-80 bg-white shadow-2xl p-4'>
                 <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
                 <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /><br />

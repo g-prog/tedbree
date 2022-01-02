@@ -13,27 +13,27 @@ import Axios from 'axios'
 const endpoint = `https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree`
 function Home() {
 
-    const [destination, setDestination] = useState([])
+    const [job, setJob] = useState([])
     const [filtered, setFiltered] = useState([])
     const [searchInput, setSearchInput] = useState("")
     const[isLoading, setIsLoading] = useState(true)
   
-    const fetchDestination = async () => {
+    const fetchJob = async () => {
       const res = await fetch(endpoint)
       const data = await res.json()
-      setDestination(data)
+      setJob(data)
       setIsLoading(false)
     }
   
     useEffect(() => {
-      fetchDestination()
+      fetchJob()
     })
   
-    const searchDestination = (searchValue) => {
+    const searchJob = (searchValue) => {
       setSearchInput(searchValue)
   
       if (searchInput) {
-        const filteredSearch = destination.filter((user) =>
+        const filteredSearch = job.filter((user) =>
           Object.values(user)
             .join("")
             .toLowerCase()
@@ -41,7 +41,7 @@ function Home() {
         )
         setFiltered(filteredSearch)
       } else {
-        setFiltered(destination)
+        setFiltered(job)
       }
     }
   
@@ -94,7 +94,7 @@ function Home() {
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
-           <input  className="ml-7" type="text" name="text"id="text"  onChange={(e) => searchDestination(e.target.value)}/>
+           <input  className="ml-7" type="text" name="text"id="text"  onChange={(e) => searchJob(e.target.value)}/>
            <div className="flex ml-10">
                 <div className="line">
                     
@@ -102,7 +102,7 @@ function Home() {
                 <div className="ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
-               <input type="text" className="ml-10"  name="text"id="text"  onChange={(e) => searchDestination(e.target.value)}/>
+               <input type="text" className="ml-10"  name="text"id="text"  onChange={(e) => searchJob(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white">Search</p></button>
             </div> 
        </div>
@@ -111,7 +111,7 @@ function Home() {
    {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100 py-28 ">
         <div className='flex justify-center items-center'>
           
-          <p className='mt-2'>Showing {destination.length} results</p>
+          <p className='mt-2'>Showing {job.length} results</p>
           <div className='flex mt-2 ml-4'>
             <p className='text-gray-500'>Sort by:</p>
             <div className='flex ml-2'>
@@ -145,7 +145,7 @@ function Home() {
           
         ))
         
-      :destination && destination.map(({ id, title, salary, Location, bio}) => (
+      :job && job.map(({ id, title, salary, Location, bio}) => (
        
         <div className="flex flex-col justify-items-center items-center">
             <Link to={`/jobs/${id}`}>

@@ -4,7 +4,6 @@ function Trial() {
   const [users, setUser] = useState([])
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
   const [userId,setUserId]=useState(null)
 
   useEffect(() => {
@@ -37,12 +36,11 @@ function Trial() {
     let item=users[id-1];
     setName(item.name)
         setEmail(item.email)
-        setMobile(item.mobile);
         setUserId(item.id)
   }
   function updateUser()
   {
-    let item={name,mobile,email}
+    let item={name,email}
     console.warn("item",item)
     fetch(`https://61d06278cd2ee50017cc984f.mockapi.io/tedbree/${userId}`, {
       method: 'PUT',
