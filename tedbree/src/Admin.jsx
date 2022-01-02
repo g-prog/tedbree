@@ -81,10 +81,9 @@ function Admin() {
                 </div>
             </nav>
             <div className="w-6/12 ml-80">
-                <h1 className="text-white text-5xl font-bold mt-32" >Job</h1>
+              <h1 className="text-white text-5xl font-bold mt-32">Job</h1>
 
             </div>
-           
         </div>
 
             <div className='flex justify-around mt-10'>
@@ -135,14 +134,18 @@ function Admin() {
 
 
          </div>
-            <div className='flex flex-col justify-center w-5/12 items-center mt-10 ml-80 bg-white shadow-2xl p-4'>
+            <div className='py-20'>
+              <div className='flex flex-col justify-center w-5/12 items-center mt-10 ml-96  bg-white shadow-2xl p-4'>
                 <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
                 <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /><br />
                 <button onClick={updateUser} className='bg-rose-500 text-white py-2 px-2 mt-10 rounded text-sm ' >Update User</button> 
+              </div>
+
             </div>
             
-
             
+
+            <Footer/>
 
         </div>
         
