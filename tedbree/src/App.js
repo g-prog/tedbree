@@ -4,7 +4,9 @@ import JobApplication from './JobApplication'
 import Home from './Home'
 import JobDetails from './JobDetails'
 import Admin from './Admin'
+import Trial from './Trial'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
+import AdminCreate from './AdminCreate';
 
 function App() {
   return (
@@ -21,6 +23,13 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/admin" element={<Admin />}/>
+        </Routes>
+        <Routes>
+          <Route path="/update" element={<Trial />}/>
+        </Routes>
+
+        <Routes>
+          <Route path="/admin-create" element={<AdminCreate />}/>
         </Routes>
         
         <Routes>
