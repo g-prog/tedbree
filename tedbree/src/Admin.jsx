@@ -5,6 +5,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import SearchIcon from '@mui/icons-material/Search';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 
@@ -71,12 +72,12 @@ function Admin() {
             <div className=' flex flex-col w-full bg-sky-900 py-11 relative'>
             <nav className='flex justify-around'>
                 <div className="flex flex-col">
-                    <h1 className="font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
-                    <p className='text-sky-100 text-xs font-serif italic origin-bottom -rotate-4 ml-4 mt-1'>for employers</p>
+                  <h1 className="font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+                  <p className='text-sky-100 text-xs font-serif italic origin-bottom -rotate-4 ml-4 mt-1'>for employers</p>
                 </div>
                 <div className='flex'>
-                    <NotificationsIcon style={{color: "white",  marginTop: 10 }}/>
-                    <img  className='w-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
+                  <NotificationsIcon style={{color: "white",  marginTop: 10 }}/>
+                  <img  className='w-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
                 </div>
             </nav>
             <div className="w-6/12 ml-80">
@@ -94,11 +95,11 @@ function Admin() {
                 </div>
 
                 <button className='bg-rose-500 flex py-1.5 px-2 rounded-lg text-sm'>
-                    <AddIcon style={{color: "white", marginTop: 10, fontSize: 20 }}/>
-                    <Link to='/admin-create'>
+                  <AddIcon style={{color: "white", marginTop: 10, fontSize: 20 }}/>
+                  <Link to='/admin-create'>
                     <p className='text-white mt-2'>New Job</p>
 
-                    </Link>
+                  </Link>
                     
 
                 </button>
@@ -108,8 +109,8 @@ function Admin() {
                 <div className='text-white'>Job</div>
                 <div className='text-white'>Email</div>
                 <div className='flex'>
-                    <p className='text-white'>Filter</p>
-                    <FilterAltIcon  style={{color: "white", marginLeft: 5 }}/>
+                  <p className='text-white'>Filter</p>
+                  <FilterAltIcon  style={{color: "white", marginLeft: 5 }}/>
                 </div>
 
             </div>
@@ -125,7 +126,7 @@ function Admin() {
                     <button  onClick={() => selectUser(item.id)} className='bg-rose-500 text-white w-20 rounded text-sm'>Edit</button>
                     <button onClick={() => deleteUser(item.id)} className='border-2 border-cyan-400 text-cyan-400 py-1 px-2 text-sm'>Delete</button>
 
-                </div>
+                  </div>
                 
 
                
