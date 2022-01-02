@@ -5,10 +5,14 @@ import Home from './Home'
 import JobDetails from './JobDetails'
 import Admin from './Admin'
 import Jobs from './Jobs'
+import Menu from './Menu'
+import Login from './Login'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import AdminCreate from './AdminCreate';
+import { useState } from "react";
 
 function App() {
+  const[menuOpen, setMenuOpen] = useState(false)
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,7 +20,13 @@ function App() {
           <Route path="/create" element={<JobCreation />}/>
         </Routes>
         <Routes>
-          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/" element={<Home  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}/>
+        </Routes>
+        <Routes>
+          <Route exact path="/menu" element={<Menu  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}/>
+        </Routes>
+        <Routes>
+          <Route exact path="/login" element={<Login/>}/>
         </Routes>
         <Routes>
           <Route path="/apply" element={<JobApplication />}/>

@@ -8,13 +8,13 @@ import Axios from 'axios';
 
 
 function JobCreation() {
-    const url = "https://api.jobboard.tedbree.com/v1"
+    const url = "https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree"
     const [data, setData] = useState({
-      Title:"",
+      title:"",
       Company:"",
       Location:"",
       EmploymentType:"",
-      Salary:"",
+      salary:"",
       Deadline:"",
       Category:""
     })
@@ -22,10 +22,10 @@ function JobCreation() {
     function submit(e){
         e.preventDefault();
         Axios.post(url,{
-          Title: data.Title,
+          title: data.title,
           Company: data.Company,
           Location: data.Location,
-          Salary: data.Salary,
+          salary: data.salary,
           Deadline: data.Deadline,
           EmploymentType: data.EmploymentType,
           Category: data.Category
@@ -59,7 +59,7 @@ function JobCreation() {
             <form onSubmit={(e)=> submit(e)}>
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label className=" text-sky-900 text-sm font-bold" > Job Title </label>
-                    <input onChange={(e)=>handle(e)} id="Title" value={data.Title}className="bg-white w-full border-2 border-gray-300 mt-2 rounded-md py-1" type="text" />
+                    <input onChange={(e)=>handle(e)} id="title" value={data.title}className="bg-white w-full border-2 border-gray-300 mt-2 rounded-md py-1" type="text" />
 
                 </div>
 
@@ -90,13 +90,13 @@ function JobCreation() {
 
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label className=" text-sky-900 text-sm font-bold" >Salary Range</label>
-                    <input onChange={(e)=>handle(e)} id="Salary" value={data.Salary}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="text" />
+                    <input onChange={(e)=>handle(e)} id="salary" value={data.salary}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="text" />
 
                 </div>
 
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label className=" text-sky-900 text-sm font-bold" >Submission deadline</label>
-                    <input onChange={(e)=>handle(e)} id="Deadline" value={data.Deadline}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="text" />
+                    <input onChange={(e)=>handle(e)} id="Deadline" value={data.Deadline}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="date" />
 
                 </div>
 

@@ -42,6 +42,12 @@ function JobApplication() {
 
                 </div>
 
+                <div className="flex flex-col mt-14 justify-items-center">
+                    <label className=" text-sky-900 text-sm font-bold" >CV</label>
+                    <input className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="file"/>
+
+                </div>
+
                
 
                 

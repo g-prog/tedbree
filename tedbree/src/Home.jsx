@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import './home.css'
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import SearchIcon from '@mui/icons-material/Search';
+import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
 import Card from './Card';
@@ -11,7 +12,7 @@ import Axios from 'axios'
 
 
 const endpoint = `https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree`
-function Home() {
+function Home({menuOpen, setMenuOpen}) {
 
     const [job, setJob] = useState([])
     const [filtered, setFiltered] = useState([])
@@ -63,10 +64,11 @@ function Home() {
     
   return (
   
-   <div >
+   <div  >
+     
       <div className="w-full bg-sky-900 py-11 relative">
        <div className="flex flex-col ">
-          <nav>
+          <nav className={"topbar " + (menuOpen && "active")}>
                 <div className="logo">
                   <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
                 </div>
@@ -78,6 +80,10 @@ function Home() {
                       <Link to='/'><li className="text-sky-100  ml-10">Find Salaries</li></Link>  
                     </ul>
                     <Link to='/create'><button className="text-white  ml-14 bg-white py-1.5 px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
+                </div>
+
+                <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
+                  <MenuIcon style={{color: "white" }}/>
                 </div>
             </nav>
             <div className="flex mt-28 ml-72">

@@ -1,0 +1,10 @@
+.body{
+    display: flex;
+}
+
+.bg{
+    background: linear-gradient(100deg, blue 80%, crimson 20%);
+    padding: 70px;
+    width: 100%;
+    height: 100vh;
+}
