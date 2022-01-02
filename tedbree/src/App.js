@@ -4,7 +4,7 @@ import JobApplication from './JobApplication'
 import Home from './Home'
 import JobDetails from './JobDetails'
 import Admin from './Admin'
-import Trial from './Trial'
+import Jobs from './Jobs'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import AdminCreate from './AdminCreate';
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/admin" element={<Admin />}/>
         </Routes>
         <Routes>
-          <Route path="/update" element={<Trial />}/>
+          <Route path="/jobs" element={<Jobs />}/>
         </Routes>
 
         <Routes>
