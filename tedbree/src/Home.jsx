@@ -94,7 +94,7 @@ function Home() {
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
-           <input  className="ml-7" type="text" name="text"id="text"  onChange={(e) => searchJob(e.target.value)}/>
+           <input  className="ml-7" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
            <div className="flex ml-10">
                 <div className="line">
                     
@@ -102,7 +102,7 @@ function Home() {
                 <div className="ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
-               <input type="text" className="ml-10"  name="text"id="text"  onChange={(e) => searchJob(e.target.value)}/>
+               <input type="text" className="ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white text-sm">Search</p></button>
             </div> 
        </div>
