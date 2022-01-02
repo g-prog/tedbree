@@ -11,7 +11,7 @@ const [playerData, setPlayerData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+      const response = await fetch('https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree')
       const nbaData = await response.json()
   setPageCount(Math.ceil(nbaData.length/perPage))
   setPlayerData(nbaData.slice(offset, offset+perPage))
