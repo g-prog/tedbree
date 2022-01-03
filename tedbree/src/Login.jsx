@@ -20,7 +20,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-            <div className="bg-sky-50 p-36 w-full">
+            <div className="bg-sky-50 p-20 md:p-36 w-full justify-center">
                 <form>
                     <div className="flex flex-col md:mt-0 lg:mt-14 justify-items-center">
                         <label className=" text-sky-900 text-sm font-bold" > Email</label>
@@ -28,7 +28,7 @@ function Login() {
 
                     </div>
 
-                    <div className="flex flex-col md:mt-2 lg:mt-14 justify-items-center">
+                    <div className="flex flex-col md:mt-2  lg:mt-14 justify-items-center">
                         <label className=" text-sky-900 text-sm font-bold" >Password</label>
                         <input  id="email" className="bg-white w-fit md:w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="password" />
 
