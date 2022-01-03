@@ -22,20 +22,20 @@ function Login() {
             </div>
             <div className="bg-sky-50 p-36 w-full">
                 <form>
-                    <div className="flex flex-col mt-14 justify-items-center">
+                    <div className="flex flex-col md:mt-0 lg:mt-14 justify-items-center">
                         <label className=" text-sky-900 text-sm font-bold" > Email</label>
                         <input  id="name" className="bg-white   md:w-full border-2 border-gray-300 mt-2 rounded-md py-1" type="email" />
 
                     </div>
 
-                    <div className="flex flex-col mt-14 justify-items-center">
+                    <div className="flex flex-col md:mt-2 lg:mt-14 justify-items-center">
                         <label className=" text-sky-900 text-sm font-bold" >Password</label>
                         <input  id="email" className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="password" />
 
                     </div>
 
                 
-                    <div className="mt-40 justify-items-center flex flex-col">
+                    <div className="  mt-10 md:mt-4 lg:mt-40 justify-items-center flex flex-col">
                         <button className="bg-sky-900 text-white py-3.5">Login</button>
 
                     </div>

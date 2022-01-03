@@ -81,14 +81,14 @@ function Admin() {
                   <img  className='w-4  h-4 md:w-12 mt-4 md:mt-0 md:h-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
                 </div>
             </nav>
-            <div className="w-6/12 ml-10 md:ml-80">
+            <div className="w-6/12 ml-10 md:ml-40 lg:ml-80">
               <h1 className="text-white text-2xl md:text-5xl font-bold mt-32">Job</h1>
 
             </div>
         </div>
 
             <div className='flex justify-around mt-10'>
-                <div className=' flex justify-around bg-white  w-10/12 md:w-4/12 shadow-lg py-2 rounded-md'>
+                <div className=' flex justify-around bg-white  w-10/12  md:w-8/12 lg:w-4/12 shadow-lg py-2 rounded-md'>
                     <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
                     <input className='ml-4'/>
                     <button className="bg-rose-500  py-2 px-2 md:py-1 md:px-4 rounded-md ml-1 text-sm"><p className="text-white">Search</p></button>
@@ -136,7 +136,7 @@ function Admin() {
 
          </div>
             <div className='py-20'>
-              <div className='flex flex-col justify-center w-9/12 md:w-5/12 items-center mt-10 md:ml-96 ml-14 bg-white shadow-2xl p-4'>
+              <div className='flex flex-col justify-center w-9/12 md:w-5/12 items-center mt-10 md:ml-56 lg:ml-96 ml-14 bg-white shadow-2xl p-4'>
                 <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
                 <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /><br />
                 <button onClick={updateUser} className='bg-rose-500 text-white py-2 px-2 mt-10 rounded text-sm ' >Update User</button> 
