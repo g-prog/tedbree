@@ -21,7 +21,6 @@ input:focus{
     display: none;
     position: absolute;
     right: 0;
-    top: 7px;
     padding: 5px;
     color: white;
 }

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <div className='bg-sky-900 w-full py-20  flex flex-col md:flex  justify-center items-center md:justify-around'>
+        <div className='bg-sky-900 w-full py-20  md:flex md:justify-around'>
             <div className='flex flex-col mt-4 md:mt-0'>
                 <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-2 text-2xl text-sky-100">FIND JOBS</h1>
                 <div className='flex'>

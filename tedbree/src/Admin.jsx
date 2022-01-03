@@ -78,26 +78,26 @@ function Admin() {
                 </div>
                 <div className='flex'>
                   <NotificationsIcon style={{color: "white",  marginTop: 10 }}/>
-                  <img  className='w-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
+                  <img  className='w-4  h-4 md:w-12 mt-4 md:mt-0 md:h-12 rounded-full ml-4' src="../assets/job2.jpg" alt='logo'/>
                 </div>
             </nav>
-            <div className="w-6/12 ml-80">
-              <h1 className="text-white text-5xl font-bold mt-32">Job</h1>
+            <div className="w-6/12 ml-10 md:ml-80">
+              <h1 className="text-white text-2xl md:text-5xl font-bold mt-32">Job</h1>
 
             </div>
         </div>
 
             <div className='flex justify-around mt-10'>
-                <div className=' flex justify-around bg-white w-4/12 shadow-lg py-2 rounded-md'>
+                <div className=' flex justify-around bg-white  w-10/12 md:w-4/12 shadow-lg py-2 rounded-md'>
                     <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
                     <input className='ml-4'/>
-                    <button className="bg-rose-500 py-1 px-4 rounded-md ml-1 text-sm"><p className="text-white">Search</p></button>
+                    <button className="bg-rose-500  py-2 px-2 md:py-1 md:px-4 rounded-md ml-1 text-sm"><p className="text-white">Search</p></button>
                 </div>
 
-                <button className='bg-rose-500 flex py-1.5 px-2 rounded-lg text-sm'>
+                <button className='bg-rose-500  hidden md:flex py-1 px-1 rounded-lg text-sm'>
                   <AddIcon style={{color: "white", marginTop: 10, fontSize: 20 }}/>
                   <Link to='/admin-create'>
-                    <p className='text-white mt-2'>New Job</p>
+                    <p className='text-white mt-2'>New User</p>
 
                   </Link>
                     
@@ -105,11 +105,11 @@ function Admin() {
                 </button>
             </div>
 
-            <div className='flex bg-sky-900 w-11/12 mt-10 ml-10 rounded-md py-2 px-2 justify-evenly'>
-                <div className='text-white'>Job</div>
-                <div className='text-white'>Email</div>
+            <div className='flex bg-sky-900  w-12/12 md:w-11/12 mt-10 md:ml-10 rounded-md py-2 px-2 justify-evenly'>
+                <div className='text-white md:text-sm text-xs'>Job</div>
+                <div className='text-white md:text-sm text-xs'>Email</div>
                 <div className='flex'>
-                  <p className='text-white'>Filter</p>
+                  <p className='text-white md:text-sm text-xs'>Filter</p>
                   <FilterAltIcon  style={{color: "white", marginLeft: 5 }}/>
                 </div>
 
@@ -119,12 +119,12 @@ function Admin() {
             <div>
                 {
                  users.map((item, i) =>
-                 <div  className='flex  bg-white shadow-lg w-11/12 ml-10 mt-4 py-4 justify-around' key={i}>
+                 <div  className='flex  bg-white shadow-lg w-12/12 md:w-11/12 md:ml-10 mt-4 py-4 justify-around' key={i}>
                     <div><RadioButtonCheckedIcon style={{color: "crimson", marginLeft: 5 }}/></div>
-                    <div className=''>{item.name}</div>
-                    <div className=''>{item.email}</div>
-                    <button  onClick={() => selectUser(item.id)} className='bg-rose-500 text-white w-20 rounded text-sm'>Edit</button>
-                    <button onClick={() => deleteUser(item.id)} className='border-2 border-cyan-400 text-cyan-400 py-1 px-2 text-sm'>Delete</button>
+                    <div className='text-xs md:text-sm'>{item.name}</div>
+                    <div className='text-xs md:text-sm'>{item.email}</div>
+                    <button  onClick={() => selectUser(item.id)} className='bg-rose-500 text-white w-20 rounded text-sm hidden md:block'>Edit</button>
+                    <button onClick={() => deleteUser(item.id)} className='border-2 border-cyan-400 text-cyan-400 py-1 px-2  text-xs md:text-sm'>Delete</button>
 
                   </div>
                 
