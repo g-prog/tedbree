@@ -63,12 +63,12 @@ function Jobs() {
   
    <div >
       <div className="flex justify-center items-center">
-        <input  className=" w-6/12 bg-white border-2 border-gray-200  mt-20 shadow-md p-4" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
+        <input  className=" w-10/12 md:w-6/12 bg-white border-2 border-gray-200  mt-20 shadow-md  p-2 md:p-4" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
         
        
     
         </div>
-        {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="py-28 ">
+        {isLoading ? <h1 className="h-screen  text-2xl md:text-4xl ml-10 mt-10 md:mt-80 md:ml-80">Loading data from the API, please wait...</h1>:<div className="py-28 ">
         <div className='flex justify-center items-center'>
           
           <p className='mt-2 font-semibold text-sm'>Showing {job.length} results</p>
