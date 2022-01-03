@@ -59,7 +59,7 @@ function AdminCreate() {
 
                
                 <div className="mt-40 justify-items-center flex flex-col">
-                    <button className="bg-sky-900 text-white py-3.5">Submit Application</button>
+                    <button className="bg-sky-900 text-white py-3.5">Add User</button>
 
                 </div>
                 
