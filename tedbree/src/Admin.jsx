@@ -88,7 +88,7 @@ function Admin() {
         </div>
 
             <div className='md:flex md:justify-around mt-10'>
-                <div className='flex justify-around bg-white  w-12/12  md:w-8/12 lg:w-4/12  shadow-3xl md:shadow-lg py-2 rounded-md'>
+                <div className='flex justify-around bg-white  w-12/12  md:w-8/12 lg:w-4/12 shadow-lg py-2 rounded-md'>
                     <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
                     <input className='ml-4'/>
                     <button className="bg-rose-500  py-2 px-2 md:py-1 md:px-4 rounded-md ml-1 text-sm"><p className="text-white">Search</p></button>
