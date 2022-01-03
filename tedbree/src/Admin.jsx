@@ -16,6 +16,7 @@ function Admin() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [userId,setUserId]=useState(null)
+    const[isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         getUsers();
@@ -28,6 +29,7 @@ function Admin() {
             setName(resp[0].name)
             setEmail(resp[0].email)
             setUserId(resp[0].id)
+            setIsLoading(false)
             
           })
         })
@@ -90,7 +92,7 @@ function Admin() {
 
             </div>
         </div>
-
+        
             <div className='md:flex md:justify-around mt-10'>
                 <div className='flex justify-around bg-white  w-12/12  md:w-8/12 lg:w-4/12 shadow-lg py-2 rounded-md'>
                     <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
@@ -119,8 +121,7 @@ function Admin() {
 
             </div>
 
-
-            <div>
+            {isLoading ? <h1 className="h-screen  text-2xl ml-10 mt-10 md:text-4xl lg:mt-40 md:mt-20  md:ml-40 lg:ml-80">Loading data from the API, please wait...</h1> :  <div>
                 {
                  users.map((item, i) =>
                  <div  className='flex  bg-white shadow-lg w-12/12 md:w-11/12 md:ml-10 mt-4 py-4 justify-around md:justify-around' key={i}>
@@ -138,7 +139,8 @@ function Admin() {
           }
 
 
-         </div>
+         </div> }
+           
             <div className='py-20'>
               <div className='flex flex-col justify-center w-9/12 md:w-5/12 items-center mt-10 md:ml-56 lg:ml-96 ml-14 bg-white shadow-2xl p-4'>
                 <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
