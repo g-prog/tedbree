@@ -73,7 +73,11 @@ function Admin() {
             <div className=' flex flex-col w-full bg-sky-900 py-11 relative'>
             <nav className='flex justify-around'>
                 <div className="flex flex-col">
-                  <h1 className="font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+                  <Link to='/'>
+                    <h1 className="font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+
+                  </Link>
+                  
                   <p className='text-sky-100 text-xs font-serif italic origin-bottom -rotate-4 ml-4 mt-1'>for employers</p>
                 </div>
                 <div className='flex'>

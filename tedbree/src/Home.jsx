@@ -88,9 +88,13 @@ function Home({menuOpen, setMenuOpen}) {
       <div className="w-full bg-sky-900 py-2 md:py-11 relative">
        <div className="flex flex-col ">
        <nav className="bg-sky-900 flex py-4 px-4 justify-around sticky top-0 w-full">
-           <div className="logo">
+        <Link to='/'> 
+          <div className="logo">
               <h1 className="text-white font-bold font-serif mt-4 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
-            </div>
+          </div>
+
+        </Link>
+           
            {(toggleMenu || screenWidth > 500) && (
                <div className="flex">
                <ul className="list">
