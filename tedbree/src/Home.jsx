@@ -89,7 +89,7 @@ function Home({menuOpen, setMenuOpen}) {
        <div className="flex flex-col ">
        <nav className="bg-sky-900 flex py-4 px-4 justify-around sticky top-0 w-full">
            <div className="logo">
-              <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+              <h1 className="text-white font-bold font-serif mt-4 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
             </div>
            {(toggleMenu || screenWidth > 500) && (
                <div className="flex">
@@ -98,7 +98,7 @@ function Home({menuOpen, setMenuOpen}) {
                   <Link to='/admin'><li className=" text-white  font-bold md:text-sky-200 mt-4 md:mt-0 text-sm ml-10 hover:text-white hover:font-bold">Admin</li></Link>
                   <Link to='/login'><li className=" text-white font-bold md:text-sky-200 text-sm md:mt-0 mt-4 ml-10 hover:text-white hover:font-bold">Login</li></Link>
                   <Link to='/apply'><li className=" text-white font-bold md:text-sky-200 text-sm mt-4 md:mt-0 ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
-                  <Link to='/create'><button className="text-white mt-4 md:mt-0 ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
+                  <Link to='/create'><button className="text-white mt-4 w-20 md:mt-0 ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                </ul>
                
            </div>
