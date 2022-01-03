@@ -28,7 +28,8 @@ function JobCreation() {
           salary: data.salary,
           Deadline: data.Deadline,
           EmploymentType: data.EmploymentType,
-          Category: data.Category
+          Category: data.Category,
+          description: data.description
           
 
     
@@ -91,6 +92,12 @@ function JobCreation() {
                 <div className="flex flex-col mt-14 justify-items-center">
                     <label className=" text-sky-900 text-sm font-bold" >Salary Range</label>
                     <input onChange={(e)=>handle(e)} id="salary" value={data.salary}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="text" />
+
+                </div>
+
+                <div className="flex flex-col mt-14 justify-items-center">
+                    <label className=" text-sky-900 text-sm font-bold" >Job Description</label>
+                    <input onChange={(e)=>handle(e)} id="description" value={data.description}className="bg-white w-full border-2 border-gray-300 mt-4 rounded-md py-1" type="text" />
 
                 </div>
 
