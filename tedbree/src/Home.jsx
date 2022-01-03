@@ -85,21 +85,20 @@ function Home({menuOpen, setMenuOpen}) {
   return (
   
    <div>
-     
       <div className="w-full bg-sky-900 py-2 md:py-11 relative">
        <div className="flex flex-col ">
-       <nav className="bg-sky-900 flex py-4 px-4 justify-between md:justify-around sticky top-0 w-full">
+       <nav className="bg-sky-900 flex py-4 px-4 justify-around sticky top-0 w-full">
            <div className="logo">
               <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
             </div>
            {(toggleMenu || screenWidth > 500) && (
                <div className="flex">
                <ul className="list">
-                  <Link to='/jobs'><li className="text-white  md:ml-10 text-sm font-bold hover:text-sky-400 hover:font-bold">Jobs</li></Link>
-                  <Link to='/admin'><li className=" text-white  font-bold md:text-sky-200 mt-4 md:mt-0 text-sm md:ml-10 hover:text-white hover:font-bold">Admin</li></Link>
-                  <Link to='/login'><li className=" text-white font-bold md:text-sky-200 text-sm md:mt-0 mt-4 md:ml-10 hover:text-white hover:font-bold">Login</li></Link>
-                  <Link to='/apply'><li className=" text-white font-bold md:text-sky-200 text-sm mt-4 md:mt-0 md:ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
-                  <Link to='/create'><button className="text-white mt-4 md:mt-0 md:ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
+                  <Link to='/jobs'><li className="text-white   lg:mt-0 ml-10 text-sm font-bold hover:text-sky-400 hover:font-bold">Jobs</li></Link>
+                  <Link to='/admin'><li className=" text-white  font-bold md:text-sky-200 mt-4 md:mt-0 text-sm ml-10 hover:text-white hover:font-bold">Admin</li></Link>
+                  <Link to='/login'><li className=" text-white font-bold md:text-sky-200 text-sm md:mt-0 mt-4 ml-10 hover:text-white hover:font-bold">Login</li></Link>
+                  <Link to='/apply'><li className=" text-white font-bold md:text-sky-200 text-sm mt-4 md:mt-0 ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
+                  <Link to='/create'><button className="text-white mt-4 md:mt-0 ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                </ul>
                
            </div>
@@ -114,35 +113,33 @@ function Home({menuOpen, setMenuOpen}) {
 
     </nav>
         
-   <div className="flex  mt-4 md:mt-28 ml-4 md:ml-72">
+   <div className="flex  mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
      <div className=" w-full md:w-6/12">
-        <h1 className="text-white text-2xl md:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
+        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
       </div>
                 
-      <div className=" hidden md:ml-32 md:block">
+      <div className="hidden md:ml-32 md:block">
           <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
             </div>
       </div>
-       <div className="flex bg-white md:absolute mt-12 md:mt-0 md:ml-56 md:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white md:absolute mt-12 md:mt-0  md:ml-0 lg:ml-56 md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
            <input  className="ml-7" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
            <div className="flex ml-10">
-                <div className="line">
-                    
-               </div>
-                <div className=" ml-10">
+                <div className="line"></div>
+                <div className=" md:ml-4 lg:ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
-               <input type="text" className="ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
+               <input type="text" className="md:ml-4 lg:ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white text-sm">Search</p></button>
             </div> 
     </div>
     
    </div>
-   {isLoading ? <h1 className="h-screen  text-2xl ml-10 mt-10 md:text-4xl md:mt-80 md:ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100  py-28 ">
+   {isLoading ? <h1 className="h-screen  text-2xl ml-10 mt-10 md:text-4xl lg:mt-80 md:mt-40  md:ml-40 lg:ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100  py-28 ">
         <div className='flex justify-center items-center'>
           
           <p className='mt-2 font-semibold text-sm'>Showing {job.length} results</p>
@@ -171,11 +168,6 @@ function Home({menuOpen, setMenuOpen}) {
           </Link>
 
       </div>
-          
-             
-                
-        
-          
           
         ))
         
