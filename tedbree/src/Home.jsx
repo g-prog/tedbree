@@ -98,7 +98,7 @@ function Home({menuOpen, setMenuOpen}) {
                   <Link to='/jobs'><li className="text-white  md:ml-10 text-sm font-bold hover:text-sky-400 hover:font-bold">Jobs</li></Link>
                   <Link to='/admin'><li className=" text-white  font-bold md:text-sky-200 mt-4 md:mt-0 text-sm md:ml-10 hover:text-white hover:font-bold">Admin</li></Link>
                   <Link to='/login'><li className=" text-white font-bold md:text-sky-200 text-sm md:mt-0 mt-4 md:ml-10 hover:text-white hover:font-bold">Login</li></Link>
-                  <Link to='/apply'><li className=" text-white font-semibold md:text-sky-200 text-sm mt-4 md:mt-0 md:ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
+                  <Link to='/apply'><li className=" text-white font-bold md:text-sky-200 text-sm mt-4 md:mt-0 md:ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
                   <Link to='/create'><button className="text-white mt-4 md:mt-0 md:ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                </ul>
                

@@ -24,7 +24,7 @@ function Login() {
                 <form>
                     <div className="flex flex-col mt-14 justify-items-center">
                         <label className=" text-sky-900 text-sm font-bold" > Email</label>
-                        <input  id="name" className="bg-white w-full border-2 border-gray-300 mt-2 rounded-md py-1" type="email" />
+                        <input  id="name" className="bg-white   md:w-full border-2 border-gray-300 mt-2 rounded-md py-1" type="email" />
 
                     </div>
 
