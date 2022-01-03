@@ -12,7 +12,7 @@ import Axios from 'axios'
 
 
 const endpoint = `https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree`
-function Home({menuOpen, setMenuOpen}) {
+function Home() {
   
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
