@@ -1,12 +1,13 @@
 import React from "react";
-import './jobcreation.css'
 
 function JobApplication() {
+   
+
   return (
    <div className="job">
         <div className="bg-cyan-50  w-11/12 md:w-6/12  flex flex-col justify-items-center px-6 py-7 rounded-sm">
             <div className="flex flex-col justify-items-center">
-                <h3 className="text-sky-900 text-lg font-bold" >New Job</h3>
+                <h3 className="text-sky-900 text-lg font-bold" >Job</h3>
                 
 
             </div>

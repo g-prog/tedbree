@@ -7,27 +7,23 @@ import Admin from './Admin'
 import Jobs from './Jobs'
 import Menu from './Menu'
 import Login from './Login'
-import Navbar from './Navbar'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import AdminCreate from './AdminCreate';
-import { useState } from "react";
+
 
 function App() {
-  const[menuOpen, setMenuOpen] = useState(false)
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/create" element={<JobCreation />}/>
         </Routes>
+    
         <Routes>
-          <Route path="/nav" element={<Navbar />}/>
+          <Route exact path="/" element={<Home />}/>
         </Routes>
         <Routes>
-          <Route exact path="/" element={<Home  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}/>
-        </Routes>
-        <Routes>
-          <Route exact path="/menu" element={<Menu  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}/>
+          <Route exact path="/menu" element={<Menu />}/>
         </Routes>
         <Routes>
           <Route exact path="/login" element={<Login/>}/>
