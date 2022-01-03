@@ -12,8 +12,8 @@ function JobDetails() {
     const { id} = useParams();
     const { loading, error, data} = useFetch('https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree/' + id)
     
-   if(loading) return <p>loading...</p>
-   if(error) return <p>Error...</p>
+   if(loading) return <p>loading API's, please wait...</p>
+   if(error) return <p>Error, kindly check your internet connectivity...</p>
    console.log(data)
   return (
    <div className="flex flex-col p-10">
