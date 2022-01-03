@@ -105,11 +105,11 @@ function Admin() {
                 </button>
             </div>
 
-            <div className='flex bg-sky-900  w-12/12 md:w-11/12 mt-10 md:ml-10 rounded-md py-2 px-2 justify-evenly'>
-                <div className='text-white md:text-sm text-xs'>Job</div>
-                <div className='text-white md:text-sm text-xs'>Email</div>
+            <div className='flex bg-sky-900  w-12/12 md:w-11/12 mt-10 md:ml-10 rounded-md py-2 px-2  justify-between md:justify-evenly'>
+                <div className='text-white md:text-sm text-xs md:mt-0 mt-2'>Job</div>
+                <div className='text-white md:text-sm text-xs md:mt-0 mt-2'>Email</div>
                 <div className='flex'>
-                  <p className='text-white md:text-sm text-xs'>Filter</p>
+                  <p className='text-white md:text-sm text-xs md:mt-0 mt-2'>Filter</p>
                   <FilterAltIcon  style={{color: "white", marginLeft: 5 }}/>
                 </div>
 
@@ -119,10 +119,10 @@ function Admin() {
             <div>
                 {
                  users.map((item, i) =>
-                 <div  className='flex  bg-white shadow-lg w-12/12 md:w-11/12 md:ml-10 mt-4 py-4 justify-around' key={i}>
+                 <div  className='flex  bg-white shadow-lg w-12/12 md:w-11/12 md:ml-10 mt-4 py-4 justify-around md:justify-around' key={i}>
                     <div><RadioButtonCheckedIcon style={{color: "crimson", marginLeft: 5 }}/></div>
-                    <div className='text-xs md:text-sm'>{item.name}</div>
-                    <div className='text-xs md:text-sm'>{item.email}</div>
+                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.name}</div>
+                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.email}</div>
                     <button  onClick={() => selectUser(item.id)} className='bg-rose-500 text-white w-20 rounded text-sm hidden md:block'>Edit</button>
                     <button onClick={() => deleteUser(item.id)} className='border-2 border-cyan-400 text-cyan-400 py-1 px-2  text-xs md:text-sm'>Delete</button>
 
@@ -136,7 +136,7 @@ function Admin() {
 
          </div>
             <div className='py-20'>
-              <div className='flex flex-col justify-center w-5/12 items-center mt-10 ml-96  bg-white shadow-2xl p-4'>
+              <div className='flex flex-col justify-center w-9/12 md:w-5/12 items-center mt-10 md:ml-96 ml-14 bg-white shadow-2xl p-4'>
                 <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
                 <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /><br />
                 <button onClick={updateUser} className='bg-rose-500 text-white py-2 px-2 mt-10 rounded text-sm ' >Update User</button> 
