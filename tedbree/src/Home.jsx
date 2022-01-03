@@ -86,9 +86,9 @@ function Home({menuOpen, setMenuOpen}) {
   
    <div>
      
-      <div className="w-full bg-sky-900 py-11 relative">
+      <div className="w-full bg-sky-900 py-2 md:py-11 relative">
        <div className="flex flex-col ">
-       <nav className="bg-sky-900 flex py-4 px-4 justify-between md:justify-around fixed top-0 w-full">
+       <nav className="bg-sky-900 flex py-4 px-4 justify-between md:justify-around sticky top-0 w-full">
            <div className="logo">
               <h1 className="text-white font-bold font-serif italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
             </div>
@@ -114,17 +114,17 @@ function Home({menuOpen, setMenuOpen}) {
 
     </nav>
         
-            <div className="flex mt-28 ml-72">
-              <div className="w-6/12">
-                <h1 className="text-white text-5xl font-medium mt-32" >Find Your Dream Job</h1>
+            <div className="flex  mt-4 md:mt-28  ml-4 md:ml-72">
+              <div className=" w-full md:w-6/12">
+                <h1 className="text-white text-2xl md:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
               </div>
                 
-              <div className="ml-32">
+              <div className=" hidden md:ml-32 md:block">
                 <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
             </div>
        </div>
-       <div className="flex bg-white absolute mt-0 ml-56 w-8/12 py-5  rounded shadow-2xl">
+       <div className="flex bg-white mt-10  md:absolute mt-0 md:ml-56 md:w-8/12 md:py-5  rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
@@ -133,7 +133,7 @@ function Home({menuOpen, setMenuOpen}) {
                 <div className="line">
                     
                </div>
-                <div className="ml-10">
+                <div className=" ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
                <input type="text" className="ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
