@@ -119,7 +119,7 @@ function Home() {
         
    <div className="flex  mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
      <div className=" w-full md:w-6/12">
-        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
+        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-10 md:mt-32" >Find Your Dream Job</h1>
       </div>
                 
       <div className="hidden md:ml-32 md:block">
