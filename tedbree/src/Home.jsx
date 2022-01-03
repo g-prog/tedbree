@@ -95,11 +95,11 @@ function Home({menuOpen, setMenuOpen}) {
            {(toggleMenu || screenWidth > 500) && (
                <div className="flex">
                <ul className="list">
-                     <Link to='/jobs'><li className="text-white  md:ml-10 text-sm font-bold hover:text-sky-400 hover:font-bold">Jobs</li></Link>
-                     <Link to='/admin'><li className="text-sky-400 mt-4 md:mt-0 text-sm md:ml-10 hover:text-white hover:font-bold">Admin</li></Link>
-                     <Link to='/login'><li className="text-sky-400 text-sm md:mt-0 mt-4 md:ml-10 hover:text-white hover:font-bold">Login</li></Link>
-                     <Link to='/'><li className="text-sky-400 text-sm mt-4 md:mt-0 md:ml-10 hover:text-white hover:font-bold">Find Salaries</li></Link>  
-                     <Link to='/create'><button className="text-white mt-4 md:mt-0 md:ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
+                  <Link to='/jobs'><li className="text-white  md:ml-10 text-sm font-bold hover:text-sky-400 hover:font-bold">Jobs</li></Link>
+                  <Link to='/admin'><li className=" text-white  font-bold md:text-sky-200 mt-4 md:mt-0 text-sm md:ml-10 hover:text-white hover:font-bold">Admin</li></Link>
+                  <Link to='/login'><li className=" text-white font-bold md:text-sky-200 text-sm md:mt-0 mt-4 md:ml-10 hover:text-white hover:font-bold">Login</li></Link>
+                  <Link to='/apply'><li className=" text-white font-semibold md:text-sky-200 text-sm mt-4 md:mt-0 md:ml-10 hover:text-white hover:font-semibold">Apply</li></Link>  
+                  <Link to='/create'><button className="text-white mt-4 md:mt-0 md:ml-14 bg-white hover:text-white py-1.5 hover:font-bold px-1.5 rounded"><p className="text-sky-900 text-xs font-bold">Post jobs</p></button></Link>
                </ul>
                
            </div>
@@ -109,22 +109,22 @@ function Home({menuOpen, setMenuOpen}) {
             
             
             <div className="hamburger">
-                <MenuIcon  onClick={toggleNav}style={{color: "white" }}/>
+              <MenuIcon  onClick={toggleNav}style={{color: "white" }}/>
             </div>
 
     </nav>
         
-            <div className="flex  mt-4 md:mt-28  ml-4 md:ml-72">
-              <div className=" w-full md:w-6/12">
-                <h1 className="text-white text-2xl md:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
-              </div>
+   <div className="flex  mt-4 md:mt-28 ml-4 md:ml-72">
+     <div className=" w-full md:w-6/12">
+        <h1 className="text-white text-2xl md:text-5xl font-bold mt-32" >Find Your Dream Job</h1>
+      </div>
                 
-              <div className=" hidden md:ml-32 md:block">
-                <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
+      <div className=" hidden md:ml-32 md:block">
+          <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
             </div>
-       </div>
-       <div className="flex bg-white mt-10  md:absolute mt-0 md:ml-56 md:w-8/12 md:py-5  rounded shadow-2xl">
+      </div>
+       <div className="flex bg-white md:absolute mt-12 md:mt-0 md:ml-56 md:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
@@ -139,10 +139,10 @@ function Home({menuOpen, setMenuOpen}) {
                <input type="text" className="ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white text-sm">Search</p></button>
             </div> 
-       </div>
+    </div>
     
    </div>
-   {isLoading ? <h1 className="h-screen text-4xl mt-80 ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100  py-28 ">
+   {isLoading ? <h1 className="h-screen  text-2xl ml-10 mt-10 md:text-4xl md:mt-80 md:ml-80">Loading data from the API, please wait...</h1>:<div className="bg-sky-100  py-28 ">
         <div className='flex justify-center items-center'>
           
           <p className='mt-2 font-semibold text-sm'>Showing {job.length} results</p>
