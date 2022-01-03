@@ -7,6 +7,7 @@ import Admin from './Admin'
 import Jobs from './Jobs'
 import Menu from './Menu'
 import Login from './Login'
+import Navbar from './Navbar'
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import AdminCreate from './AdminCreate';
 import { useState } from "react";
@@ -18,6 +19,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/create" element={<JobCreation />}/>
+        </Routes>
+        <Routes>
+          <Route path="/nav" element={<Navbar />}/>
         </Routes>
         <Routes>
           <Route exact path="/" element={<Home  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}/>

@@ -28,6 +28,7 @@ function Admin() {
             setName(resp[0].name)
             setEmail(resp[0].email)
             setUserId(resp[0].id)
+            
           })
         })
       }

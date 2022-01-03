@@ -1,13 +1,3 @@
-
-input:focus{
-    outline: none;
-}
-
-.line{
-    border-left: 2px solid turquoise;
-    height: 40px;
-    margin-left: 110px;
-}
 .list{
     display: flex;
     height: 100%;
