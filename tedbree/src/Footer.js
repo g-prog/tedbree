@@ -20,7 +20,7 @@ function Footer() {
                 
 
             </div>
-            <div className='flex flex-col md:mt-4 mt-10 ml-28 md:ml-0 md:mt-0'>
+            <div className='flex flex-col md:mt-4 mt-10 ml-32 md:ml-0 md:mt-0'>
                 <h1 className='text-white text-lg font-bold'>Quick links</h1>
                 <Link to='/'>
                     <p className='text-white text-sm font-medium'>Home</p>
@@ -39,7 +39,7 @@ function Footer() {
 
             </div>
 
-            <div className='flex flex-col mt-10 md:mt-4  ml-28 md:ml-0 md:mt-0'>
+            <div className='flex flex-col mt-10 md:mt-4  ml-32 md:ml-0 md:mt-0'>
                 <h1 className='text-white text-lg font-bold'>Quick links</h1>
                 <Link to='/'>
                     <p className='text-white text-sm font-medium'>Home</p>
