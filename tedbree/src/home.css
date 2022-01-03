@@ -29,14 +29,14 @@ input:focus{
     .list{
         display: flex;
         flex-direction: column;
-        padding: 200px 50px;
+        padding: 200px 120px;
         align-items: center;
         justify-content: center;
         background-color: turquoise;
-        opacity: 0.8;
-        right: 0;
-        top: 63px;
-        width: 50%;
+        opacity: 0.9;
+        right: 3px;
+        top: 50px;
+        width: 60%;
         height: 100%;
         position: absolute;
         z-index: 4;
