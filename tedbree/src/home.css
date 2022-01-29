@@ -49,12 +49,21 @@ input:focus{
         margin-top: 70px !important;
         margin-right: 10px;
         font-size: 25px;
+        border-bottom: 2px solid white;
+        width: 300px;
+        padding: 30px 2px;
     }
 
     .list  button{
         margin-top: 70px !important;
         margin-right: 10px;
         font-size: 25px;
+        width: 150px;
+        padding: 10px 10px;
+    }
+
+    .list  button p{
+        font-size: 15px;
     }
 
     .hamburger{
