@@ -87,7 +87,7 @@ function Home() {
    <div>
       <div className="w-full bg-sky-900 py-0.5 md:py-11 relative">
        <div className="flex flex-col ">
-       <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around sticky top-0 w-full">
+       <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around  w-full">
         <Link to='/'> 
           <div className="logo">
               <h1 className="text-white font-bold font-serif mt-8 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
