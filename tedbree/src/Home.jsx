@@ -119,11 +119,11 @@ function Home() {
         
    <div className="flex py-32 md:py-0 mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
      <div className=" w-full md:w-6/12">
-        <h1 className="text-white text-2xl  ml-8 md:ml-0 md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
+        <h1 className="text-white text-2xl   md:ml-0 md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
       </div>
                 
       <div className="hidden md:ml-32 md:block">
-          <img className="w-10/12 " src="../assets/smiling.png" alt="smiling man" />
+          <img className=" w-5/6 md:w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
             </div>
       </div>

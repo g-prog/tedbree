@@ -13,8 +13,8 @@ import Footer from './Footer';
 
 function Admin() {
     const [users, setUser] = useState([])
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+    const [title, setTitle] = useState("");
+    const [salary, setSalary] = useState("");
     const [userId,setUserId]=useState(null)
     const[isLoading, setIsLoading] = useState(true)
 
@@ -22,13 +22,13 @@ function Admin() {
         getUsers();
       }, [])
       function getUsers() {
-        fetch("https://61d06278cd2ee50017cc984f.mockapi.io/tedbree").then((result) => {
+        fetch("https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree").then((result) => {
           result.json().then((resp) => {
             // console.warn(resp)
             setUser(resp)
-            setName(resp[0].name)
-            setEmail(resp[0].email)
-            setUserId(resp[0].id)
+            setTitle(resp[4].title)
+            setSalary(resp[4].salary)
+            setUserId(resp[4].id)
             setIsLoading(false)
             
           })
@@ -36,7 +36,7 @@ function Admin() {
       }
     
       function deleteUser(id) {
-        fetch(`https://61d06278cd2ee50017cc984f.mockapi.io/tedbree/${id}`, {
+        fetch(`https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree/${id}`, {
           method: 'DELETE'
         }).then((result) => {
           result.json().then((resp) => {
@@ -48,15 +48,15 @@ function Admin() {
       function selectUser(id)
       {
         let item=users[id-1];
-        setName(item.name)
-            setEmail(item.email)
+        setTitle(item.title)
+            setSalary(item.salary)
             setUserId(item.id)
       }
       function updateUser()
       {
-        let item={name,email}
+        let item={title,salary}
         console.warn("item",item)
-        fetch(`https://61d06278cd2ee50017cc984f.mockapi.io/tedbree/${userId}`, {
+        fetch(`https://61cf24aa65c32600170c7ebd.mockapi.io/tedbree/${userId}`, {
           method: 'PUT',
           headers:{
             'Accept':'application/json',
@@ -126,8 +126,8 @@ function Admin() {
                  users.map((item, i) =>
                  <div  className='flex  bg-white shadow-lg w-12/12 md:w-11/12 md:ml-10 mt-4 py-4 justify-around md:justify-around' key={i}>
                     <div><RadioButtonCheckedIcon style={{color: "crimson", marginLeft: 5 }}/></div>
-                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.name}</div>
-                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.email}</div>
+                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.title}</div>
+                    <div className='text-xs md:text-sm md:mt-0 mt-2'>{item.salary}</div>
                     <button  onClick={() => selectUser(item.id)} className='bg-rose-500 text-white w-20 rounded text-sm hidden md:block'>Edit</button>
                     <button onClick={() => deleteUser(item.id)} className='border-2 border-cyan-400 text-cyan-400 py-1 px-2  text-xs md:text-sm'>Delete</button>
 
@@ -143,8 +143,8 @@ function Admin() {
            
             <div className='py-20'>
               <div className='flex flex-col justify-center w-9/12 md:w-5/12 items-center mt-10 md:ml-56 lg:ml-96 ml-14 bg-white shadow-2xl p-4'>
-                <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
-                <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /><br />
+                <input   className='bg-white  border-2 border-gray-300 rounded-md mt-4 py-2 px-2' type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} /> <br /><br />
+                <input  className='bg-white  border-2 border-gray-300 rounded-md  mt-4 py-2 px-2' type="text" value={salary} onChange={(e)=>{setSalary(e.target.value)}} /> <br /><br />
                 <button onClick={updateUser} className='bg-rose-500 text-white py-2 px-2 mt-10 rounded text-sm ' >Update User</button> 
               </div>
 
