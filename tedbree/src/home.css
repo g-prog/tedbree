@@ -35,9 +35,9 @@ input:focus{
         background-color: turquoise;
         opacity: 0.9;
         right: 1px;
-        top: 62px;
-        width: 60%;
-        height: 100%;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
         z-index: 4;
 
