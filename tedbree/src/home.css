@@ -37,7 +37,7 @@ input:focus{
         right: 0;
         top: 0;
         width: 100vw;
-        height: 20vh;
+        height: 17vh;
         position: absolute;
         z-index: 9;
        
@@ -55,8 +55,8 @@ input:focus{
     }
 
     .list  button{
-        margin-top: 15px !important;
-        margin-right: 20px;
+        margin-top: 20px !important;
+        margin-right: 23px;
         font-size: 25px;
         width: 150px;
         padding: 10px 10px;
