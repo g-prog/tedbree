@@ -85,7 +85,7 @@ function Home() {
   return (
   
    <div>
-      <div className="w-full bg-sky-900 py-0 md:py-11 relative">
+      <div className="w-full bg-sky-900 py-0.5 md:py-11 relative">
        <div className="flex flex-col ">
        <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around sticky top-0 w-full">
         <Link to='/'> 
@@ -127,7 +127,7 @@ function Home() {
              </div>
             </div>
       </div>
-       <div className="flex bg-white absolute z-0 mt-8 ml-10 md:mt-0  md:ml-0 lg:ml-56 w-5/6 md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white absolute z-0 mt-0 ml-10 md:mt-0  md:ml-0 lg:ml-56 w-5/6 md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
