@@ -34,13 +34,27 @@ input:focus{
         justify-content: center;
         background-color: turquoise;
         opacity: 0.9;
-        right: 1px;
+        right: 0;
         top: 0;
         width: 100vw;
         height: 100vh;
         position: absolute;
         z-index: 4;
+       
 
+    }
+
+
+    .list  li{
+        margin-top: 70px !important;
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+    .list  button{
+        margin-top: 70px !important;
+        margin-right: 10px;
+        font-size: 25px;
     }
 
     .hamburger{
