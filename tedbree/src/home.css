@@ -29,7 +29,7 @@ input:focus{
     .list{
         display: flex;
         flex-direction: column;
-        padding: 200px 120px;
+        padding: 180px 120px;
         align-items: center;
         justify-content: center;
         background-color: turquoise;
@@ -37,7 +37,7 @@ input:focus{
         right: 0;
         top: 0;
         width: 100vw;
-        height: 13vh;
+        height: 9vh !important;
         position: absolute;
         z-index: 9;
        
