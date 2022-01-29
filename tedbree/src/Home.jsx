@@ -87,7 +87,7 @@ function Home() {
    <div>
       <div className="w-full bg-sky-900 py-12 md:py-11 relative">
        <div className="flex flex-col ">
-       <nav className="bg-sky-900 flex py-4 px-4 justify-around sticky top-0 w-full">
+       <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around sticky top-0 w-full">
         <Link to='/'> 
           <div className="logo">
               <h1 className="text-white font-bold font-serif mt-4 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
@@ -117,9 +117,9 @@ function Home() {
 
     </nav>
         
-   <div className="flex  mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
+   <div className="flex py-32 md:py-0 mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
      <div className=" w-full md:w-6/12">
-        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-10 md:mt-32" >Find Your Dream Job</h1>
+        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
       </div>
                 
       <div className="hidden md:ml-32 md:block">
@@ -127,7 +127,7 @@ function Home() {
              </div>
             </div>
       </div>
-       <div className="flex bg-white absolute mt-8 ml-11 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white absolute z-0 mt-8 ml-11 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
