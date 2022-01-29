@@ -127,17 +127,17 @@ function Home() {
              </div>
             </div>
       </div>
-       <div className="flex bg-white md:absolute mt-12 md:mt-0  md:ml-0 lg:ml-56 md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white md:absolute mt-12 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
            <input  className="ml-7" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
-           <div className="flex ml-10">
+           <div className=" hidden md:flex   md:ml-10">
                 <div className="line"></div>
                 <div className=" md:ml-4 lg:ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
                </div>
-               <input type="text" className="md:ml-4 lg:ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
+               <input type="text" className=" ml-2 md:ml-4 lg:ml-10"  name="text"id="text" placeholder="Search locations" onChange={(e) => searchJob(e.target.value)}/>
                 <button className="bg-rose-500 py-1.5 px-4 rounded-md ml-1"><p className="text-white text-sm">Search</p></button>
             </div> 
     </div>
