@@ -90,7 +90,7 @@ function Home() {
        <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around sticky top-0 w-full">
         <Link to='/'> 
           <div className="logo">
-              <h1 className="text-white font-bold font-serif mt-4 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
+              <h1 className="text-white font-bold font-serif mt-8 md:mt-0 italic origin-bottom -rotate-12 text-2xl text-sky-100">FIND JOBS</h1>
           </div>
 
         </Link>

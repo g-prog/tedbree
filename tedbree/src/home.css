@@ -69,6 +69,7 @@ input:focus{
     .hamburger{
         display: block;
         position: relative;
+        margin-top: 13px;
     }
 }
 
