@@ -119,7 +119,7 @@ function Home() {
         
    <div className="flex py-32 md:py-0 mt-4 lg:mt-28 ml-4  md:ml-40 lg:ml-72">
      <div className=" w-full md:w-6/12">
-        <h1 className="text-white text-2xl  md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
+        <h1 className="text-white text-2xl  ml-8 md:ml-0 md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
       </div>
                 
       <div className="hidden md:ml-32 md:block">
@@ -127,7 +127,7 @@ function Home() {
              </div>
             </div>
       </div>
-       <div className="flex bg-white absolute z-0 mt-8 ml-11 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white absolute z-0 mt-8 ml-10 md:mt-0  md:ml-0 lg:ml-56 w-5/6 md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
