@@ -85,7 +85,7 @@ function Home() {
   return (
   
    <div>
-      <div className="w-full bg-sky-900 py-12 md:py-11 relative">
+      <div className="w-full bg-sky-900 py-0 md:py-11 relative">
        <div className="flex flex-col ">
        <nav className="bg-sky-900 flex md:py-4 md:px-4 justify-around sticky top-0 w-full">
         <Link to='/'> 
