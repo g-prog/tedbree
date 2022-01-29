@@ -85,7 +85,7 @@ function Home() {
   return (
   
    <div>
-      <div className="w-full bg-sky-900 py-2 md:py-11 relative">
+      <div className="w-full bg-sky-900 py-12 md:py-11 relative">
        <div className="flex flex-col ">
        <nav className="bg-sky-900 flex py-4 px-4 justify-around sticky top-0 w-full">
         <Link to='/'> 
@@ -127,12 +127,12 @@ function Home() {
              </div>
             </div>
       </div>
-       <div className="flex bg-white md:absolute mt-12 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
+       <div className="flex bg-white absolute mt-8 ml-11 md:mt-0  md:ml-0 lg:ml-56 w-auto md:w-full lg:w-8/12 md:py-5 rounded shadow-2xl">
             <div className="ml-7">
               <SearchIcon style={{color: "turquoise",  marginTop: 10 }}/>
             </div>
            <input  className="ml-7" type="text" name="text"id="text" placeholder="Search vacancies..." onChange={(e) => searchJob(e.target.value)}/>
-           <div className=" hidden md:flex   md:ml-10">
+           <div className="hidden md:flex md:ml-10">
                 <div className="line"></div>
                 <div className=" md:ml-4 lg:ml-10">
                   <FmdGoodIcon style={{color: "turquoise", marginTop: 10 }}/>
