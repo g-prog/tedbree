@@ -37,9 +37,9 @@ input:focus{
         right: 0;
         top: 0;
         width: 100vw;
-        height: 100vh;
+        height: 20vh;
         position: absolute;
-        z-index: 4;
+        z-index: 9;
        
 
     }
@@ -48,9 +48,9 @@ input:focus{
     .list  li{
         margin-top: 70px !important;
         margin-right: 10px;
-        font-size: 25px;
+        font-size: 15px;
         border-bottom: 2px solid white;
-        width: 300px;
+        width: 250px;
         padding: 5px 2px;
     }
 
