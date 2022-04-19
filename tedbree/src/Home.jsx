@@ -122,7 +122,7 @@ function Home() {
         <h1 className="text-white text-2xl   md:ml-0 md:text-3xl lg:text-5xl font-bold mt-3 md:mt-32" >Find Your Dream Job</h1>
       </div>
                 
-      <div className="hidden md:ml-32 md:block">
+      <div className="hidden  md:ml-32 md:block">
           <img className=" w-5/6 md:w-10/12 " src="../assets/smiling.png" alt="smiling man" />
              </div>
             </div>
